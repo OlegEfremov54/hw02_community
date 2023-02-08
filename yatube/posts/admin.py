@@ -1,4 +1,4 @@
-# posts/admin.py Версия от 8 февраля. Устранение замечаний Алекасея Фролова
+# posts/admin.py Версия от 8 февраля. Устранение замечаний Алексея Фролова
 from django.contrib import admin
 from .models import Post, Group
 

@@ -1,4 +1,4 @@
-# posts/urls.py Версия от 8 февраля. Устранение замечаний Алекасея Фролова
+# posts/urls.py Версия от 8 февраля. Устранение замечаний Алексея Фролова
 from django.urls import path
 from . import views
 

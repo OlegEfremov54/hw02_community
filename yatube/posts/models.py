@@ -1,4 +1,4 @@
-# моделс. Версия от 8 февраля. Устранение замечаний Алекасея Фролова
+# моделс. Версия от 8 февраля. Устранение замечаний Алексея Фролова
 from django.db import models
 from django.contrib.auth import get_user_model
 
