@@ -1,12 +1,9 @@
-<!--posts/base.html Версия от 3 февраля. Финиш-->
+<!--posts/base.html Версия от 8 февраля. Устранение замечаний Алекасея Фролова-->
 {% extends 'base.html' %}
-{% block title %}
-  {{ title }}
-{% endblock %}
+<title>{% block title %} Главная страница сайта{% endblock %}</title>
 {% block content %}
-  <!-- класс py-5 создает отступы сверху и снизу блока -->
   <div class="container py-5">
-    <h1>{{ text }}</h1>
+    <h1>Последние новости на сайте</h1>
     {% for post in posts %}
       <ul>
         <li>

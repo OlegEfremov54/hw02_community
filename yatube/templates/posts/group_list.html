@@ -1,15 +1,12 @@
-<!--posts/group_liist.html Версия от 3 февраля. Финиш-->
+<!--posts/group_liist.html Версия от 8 февраля. Устранение замечаний Алекасея Фролова-->
 {% extends 'base.html' %}
 <!DOCTYPE html>
 <html lang="ru">
-{% block title %}
-  {{ title }}
-{% endblock %}
+<title>{% block title %} Страница групп сообществ{% endblock %}</title>
 {% block content %}
-  <!-- класс py-5 создает отступы сверху и снизу блока -->
   <div class="container py-5">
-    <h1>{{ text }}</h1>
-    <p>Группа {{ group.title }}</p>
+    <h1>Группа сообщества</h1>
+    <p>{{ group.title }}</p>
     <article>
       {% for post in posts %}
         <ul>
@@ -24,6 +21,5 @@
         {% if not forloop.last %} <hr> {% endif %}
       {% endfor %}
     </article>
-    <!-- под последним постом нет линии -->
   </div>
 {% endblock %}

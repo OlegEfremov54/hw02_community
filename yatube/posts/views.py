@@ -1,25 +1,22 @@
-# posts/views.py Версия от 3 февраля. Финиш
+# posts/views.py Версия от 8 февраля. Устранение замечаний Алекасея Фролова
 from django.shortcuts import render, get_object_or_404
 from .models import Post, Group
+from yatube.settings import POSTS_PER_PAGE
 
 
 def index(request):
-    posts = Post.objects.order_by('-pub_date')[:10]
+    posts = Post.objects.all()[:POSTS_PER_PAGE]
     context = {
-        'posts': posts,
-        'title': 'Главная страница проекта'
+        'posts': posts
     }
     return render(request, 'posts/index.html', context)
 
 
 def group_posts(request, slug):
     group = get_object_or_404(Group, slug=slug)
-    text = f'Записи сообщества {group.title}'
-    posts = Post.objects.filter(group=group).order_by('-pub_date')[:10]
+    posts = group.group.all().all()[:POSTS_PER_PAGE]
     context = {
         'group': group,
-        'posts': posts,
-        'text': text,
-        'title': 'Страница сообществ'
+        'posts': posts
     }
     return render(request, 'posts/group_list.html', context)

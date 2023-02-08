@@ -1,3 +1,4 @@
+# моделс. Версия от 8 февраля. Устранение замечаний Алекасея Фролова
 from django.db import models
 from django.contrib.auth import get_user_model
 
@@ -28,3 +29,6 @@ class Post(models.Model):
         null=True,
         on_delete=models.CASCADE,
         related_name='group')
+
+    class Meta:
+        ordering = ['-pub_date']
