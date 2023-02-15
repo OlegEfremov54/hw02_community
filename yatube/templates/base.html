@@ -19,7 +19,10 @@
     </header>
     <main>
       {% block content %}
-        Контент не подвезли :(
+        {% for post in page_obj %}
+          Контент не подвезли :(
+        {% endfor %}
+        {% include 'posts/includes/paginator.html' %}
       {% endblock %}
     </main>
     <footer>
