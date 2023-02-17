@@ -16,3 +16,9 @@ class SignUp(CreateView):
     success_url = reverse_lazy('posts:index')
     template_name = 'users/signup.html'
 # Create your views here.
+
+
+# class PasswordChenge(CreateView):
+#    form_class = PasswordChangeForm
+#    success_url = reverse_lazy('/auth/password_change/')
+#    template_name = 'users/password_change_form.html'

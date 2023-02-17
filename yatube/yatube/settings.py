@@ -19,6 +19,7 @@ INSTALLED_APPS = [
     'posts.apps.PostsConfig',  # Добавленная запись
     'users.apps.UsersConfig',  # Добавленная запись
     'core.apps.CoreConfig',   # Добавленная запись
+    'about.apps.AboutConfig',   # Добавленная запись
 ]
 
 MIDDLEWARE = [

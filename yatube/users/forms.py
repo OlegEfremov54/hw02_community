@@ -13,3 +13,9 @@ class CreationForm(UserCreationForm):
         model = User
         # укажем, какие поля должны быть видны в форме и в каком порядке
         fields = ('first_name', 'last_name', 'username', 'email')
+
+
+# class PasswordChangeForm(UserCreationForm):
+#    class Meta(UserCreationForm.Meta):
+#        model = User
+#        fields = ('old_password', 'new_password1', 'new_password2')
