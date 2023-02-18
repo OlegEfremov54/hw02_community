@@ -7,6 +7,7 @@ from django.contrib.auth import get_user_model
 
 User = get_user_model()
 
+
 def index(request):
     post_list = Post.objects.all()
     paginator = Paginator(post_list, POSTS_PER_PAGE)
